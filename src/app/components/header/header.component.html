@@ -1,0 +1,19 @@
+<div [ngClass]="{'dark-theme':isDarkTheme}"   class="container mat-app-background">
+    <mat-toolbar class="header medium-font" color="primary" >
+
+        <span class="pagetitle" (click)="toHome()">Where is the world?</span>
+        <span style="flex:auto"></span>
+        <mat-slide-toggle [(ngModel)]="isDarkTheme" labelPosition="before"  (change)="storeThemeSelection()">
+            <span class="material-icons">dark_mode </span>
+             <span class="darktitle"> Dark Mode </span>
+        </mat-slide-toggle>
+        
+    </mat-toolbar>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+    
+</div>

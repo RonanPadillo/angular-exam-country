@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming';
+
+
+$custom-typography: mat-typography-config(
+  $font-family: ' "Nunito Sans", sans-serif',
+  $headline: mat-typography-level(24px, 32px, 400),
+  $title: mat-typography-level(20px, 32px, 800),
+  $subheading-2: mat-typography-level(16px, 28px, 400),
+  $subheading-1: mat-typography-level(15px, 24px, 400),
+  $body-2: mat-typography-level(14px, 24px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $input: mat-typography-level(inherit, 1.125, 400)
+
+);
+@include mat-core($custom-typography);
+$coding-exam-primary: mat-palette($mat-blue-gray, 50);
+$coding-exam-accent: mat-palette($mat-blue-gray);
+$coding-exam-warn: mat-palette($mat-red);
+
+$coding-exam-theme: mat-light-theme($coding-exam-primary, $coding-exam-accent, $coding-exam-warn);
+@include angular-material-theme($coding-exam-theme);
+
+//for dark theme
+$coding-exam-primary-dark: mat-palette($mat-blue-gray, 800);
+$coding-exam-accent-dark: mat-palette($mat-blue-gray,700 );
+$coding-exam-warn-dark: mat-palette($mat-red);
+
+$coding-exam-theme-dark: mat-dark-theme($coding-exam-primary-dark, $coding-exam-accent-dark, $coding-exam-warn-dark);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: '"Nunito Sans", sans-serif';}
+
+@import '/src/assets/custom.scss';
+
+
+

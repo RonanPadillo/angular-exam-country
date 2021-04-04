@@ -1,0 +1,96 @@
+
+.country-container{
+    display: flex;
+    flex-direction: row;
+    padding: 30px 5% ; 
+    flex-wrap: wrap;
+    align-items: center;
+    width: 1440px;
+    margin: 0 auto;
+    
+    .actionBtn{
+        flex-grow: 1;
+        width: 100%;
+        padding: 40px 0;
+        button{
+            padding: 0 30px;
+        }
+    }
+    .country-flag{
+        flex: 0 0 45%;
+      
+        img{
+            max-width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            overflow: hidden;
+        }
+    }
+    .country-detail{
+        
+        flex: 0 0 55%;
+        line-height:  2;
+        .detail-wrapper{
+            padding: 100px;
+            .country-name{
+                width: 100%;
+                font-size: 28px;
+            }
+            .left-details{
+                display: flex;
+                flex-wrap: wrap;
+                .left-detail{
+                    width: 50%;
+                    padding-top: 30px;
+                }
+                .right-detail{
+                    padding-top: 30px
+                }
+            }
+            .borders{
+                width: 100%;
+                margin-top: 50px;
+                .borderBtn{
+                    margin: 5px;
+                    pointer-events: none;
+                }
+            }
+        }
+        
+    }
+}
+
+/* For 480 Resolution */  
+@media only screen   
+and (min-device-width : 320px)   
+and (max-device-width : 520px)
+{ 
+ 
+    .country-container{
+        padding: 0px 5% 30px;
+        width: auto;
+        .country-flag{
+            flex-basis: 100%;
+            img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+        .country-detail{
+            flex:0 0 100%;
+
+            .detail-wrapper{
+                padding: 20px 0;
+                .left-details{
+                    .left-detail{
+                        width: 100%;
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+
+    }
+}  

@@ -1,0 +1,80 @@
+
+
+<div class="country-container">
+    <div class="actionBtn">
+        <button mat-raised-button (click)="back()">
+            <span class="material-icons">
+                arrow_back
+            </span>
+            Back
+        </button>
+    </div>
+    <div  class="country-flag" *ngFor="let country of data ">
+      <img src="{{country.flag}}"/>
+    </div>
+    <div  class="country-detail" *ngFor="let country of data ">
+        <div class="detail-wrapper">
+            <h2 class="exbold-font country-name">{{country.name}}</h2>
+            <div class="left-details">
+               
+                <div class="left-detail">
+                    <div class="semibold-font">Native Name:
+                        <span class="regular-font"> {{country.nativeName}}</span>
+                    </div>
+                    <div class="semibold-font">
+                        Population:
+                        <span class="regular-font"> {{country.population}}</span>
+                    </div>
+                    <div class="semibold-font">
+                        Region:
+                        <span class="regular-font"> {{country.region}}</span>
+                    </div>
+                    <div class="semibold-font">
+                        Sub Region:
+                        <span class="regular-font"> {{country.subregion}}</span>
+                    </div>
+                    <div class="semibold-font">
+                        Capital:
+                        <span class="regular-font"> {{country.capital}}</span>
+                    </div>
+                </div>
+                <div class="right-detail">
+                    <div class="semibold-font">
+                        Top Level Domain:
+                        <span class="regular-font"> {{country.topLevelDomain}}</span>
+                    </div >
+                    <div class="semibold-font">
+                        Currencies:  
+                            <span *ngFor="let currency of country.currencies; let isLast=last" class="regular-font">
+                                {{currency.name}}{{isLast ? '' : ', '}}
+                            </span>
+           
+                       
+                    </div>
+                    <div class="semibold-font">
+                        Languages:  
+                        <span *ngFor="let lang of country.languages; let isLast=last" class="regular-font" >
+                             {{lang.name}}{{isLast ? '' : ', '}}
+                        </span>
+                     
+                    </div>
+    
+                </div>
+            </div>
+            <div class="borders" *ngIf="codeName">
+                    <span class="semibold-font">Border Countries: </span>    
+                    <button class="borderBtn" mat-raised-button *ngFor="let border of codeName">
+                    {{border.name}}
+                    </button> 
+         
+              
+            </div>
+        
+        </div>
+       
+    </div>
+
+ 
+ 
+
+</div>

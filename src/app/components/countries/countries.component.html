@@ -1,0 +1,44 @@
+<div class="country-container">
+    <div class="country-wrapper">
+        <mat-form-field appearance="outline" class="search">
+                <mat-icon matPrefix>search</mat-icon>
+                <mat-label>Search for a country....</mat-label>
+                <input  type="search" [(ngModel)] = Country matInput placeholder="Search for a country...." autocomplete="off">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Filter by region</mat-label>
+            <mat-select disableRipple  [(ngModel)] = Region>
+                <mat-option>Filter by region</mat-option>
+            <mat-option value="Africa">Africa</mat-option>
+            <mat-option value="Americas">Americas</mat-option>
+            <mat-option value="Asia">Asia</mat-option>
+            <mat-option value="Europe">Europe</mat-option>
+            <mat-option value="Oceania">Oceania</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+        <div  class="country-flag" *ngFor="let country of data | SearchPipe: Country: Region ">
+            <mat-card class="card-container" (click)="toDetail(country.name)">
+                <div class="image-container">
+                    <img src="{{country.flag}}" />
+                </div>
+            
+             
+                <mat-card-content class="country-detail">
+                    <h3 class="bold-font" >{{country.name}} </h3>
+                   <div class="thin-font">
+                       <div><span class="semibold-font">Population:</span> {{country.population}}</div>
+                       <div><span class="semibold-font">Region:</span> {{country.region}}</div>
+                       <div><span class="semibold-font">Capital:</span> {{country.capital}}</div>
+                    
+                   </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        
+
+
+ 
+ 
+
+</div>
