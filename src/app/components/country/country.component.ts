@@ -25,7 +25,7 @@ export class CountryComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.url= this.route.snapshot.params['name'];
+    this.url= this.route.snapshot.params['name'];    
     this.webapi.getDataName(this.url).subscribe(country =>{
         this.data = country;
         this.borderCode(country);
@@ -39,11 +39,8 @@ export class CountryComponent implements OnInit {
   borderCode(code: any){
 
     code.forEach((elm: any)  => {
-      console.log( )
       if(elm.borders.length > 0 ){
-
         let params = elm.borders.join(';'); 
-
         this.webapi.getCodeborder(params).subscribe((data: any)=>{
           this.codeName = data;
         })

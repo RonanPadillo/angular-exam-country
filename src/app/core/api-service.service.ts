@@ -16,9 +16,9 @@ export class ApiServiceService {
       return this.http.get<any>(url);
   }
 
-  //Fetching singel countries from URL https://restcountries.eu/rest/v2/name
+  //Fetching single countries from URL https://restcountries.eu/rest/v2/alpha/?codes=
   getCountry(data:any): Observable<any>{
-    const url = "https://restcountries.eu/rest/v2/name/" + data;
+    const url = "https://restcountries.eu/rest/v2/alpha/?codes=" + data ;
     return this.http.get<any>(url);
   }
 

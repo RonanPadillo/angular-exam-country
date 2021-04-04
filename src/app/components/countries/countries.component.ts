@@ -32,6 +32,7 @@ export class CountriesComponent implements OnInit {
       if (country){
         this.countries.push(...country);
         this.data = this.countries;
+    
       }
     })
 

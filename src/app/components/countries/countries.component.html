@@ -18,7 +18,7 @@
         </mat-form-field>
     </div>
         <div  class="country-flag" *ngFor="let country of data | SearchPipe: Country: Region ">
-            <mat-card class="card-container" (click)="toDetail(country.name)">
+            <mat-card class="card-container" (click)="toDetail(country.alpha2Code)">
                 <div class="image-container">
                     <img src="{{country.flag}}" />
                 </div>
