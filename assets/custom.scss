@@ -1,0 +1,67 @@
+body{
+    .dark-theme {
+        @include angular-material-theme($coding-exam-theme-dark);
+        color: hsl(0, 0%, 100%);
+        .mat-toolbar, .mat-raised-button{
+          background-color: hsl(209, 23%, 22%);
+        }
+
+        &.mat-app-background{
+          background: hsl(207, 26%, 17%);
+          .mat-card{
+            background-color: hsl(209, 23%, 22%);
+          }
+        }
+        // .mat-form-field-appearance-outline .mat-form-field-outline {
+        //   background: hsl(209, 23%, 22%);
+        // }
+       
+    }
+    
+    .mat-app-background{
+        color: hsl(200, 15%, 8%);
+       
+        .mat-toolbar{
+         
+            .mat-slide-toggle-content{
+              display: flex;
+              .material-icons{
+                padding-right: 5px;
+              }
+              .darktitle{
+                font-size: 14px;
+              }
+          }
+        }
+      }
+      .regular-font{
+    
+        font-weight: normal;
+        font-style: normal;
+      }
+      .medium-font{
+    
+        font-weight: 500;
+        font-style: normal;
+      }
+      .semibold-font{
+    
+        font-weight: 600;
+        font-style: normal;
+      }
+      .bold-font{
+        
+        font-weight: 800;
+        font-style: normal;
+      }
+      .exbold-font{
+        
+        font-weight: 900;
+        font-style: normal;
+      }
+      .thin-font{
+     
+        font-weight: 300;
+        font-style: normal;
+    }
+}
