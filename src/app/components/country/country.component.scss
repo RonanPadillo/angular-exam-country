@@ -32,7 +32,7 @@
         flex: 0 0 55%;
         line-height:  2;
         .detail-wrapper{
-            padding: 100px;
+            padding: 0 0 0 100px;
             .country-name{
                 width: 100%;
                 font-size: 28px;
@@ -62,10 +62,61 @@
     }
 }
 
+// 768px - 1440px resolution
+@media only screen   
+and (min-width : 900px)  
+and (max-width : 1440px)   
+{
+   .country-container{
+        width: auto;
+        .country-detail{
+
+            .detail-wrapper{
+                padding:  0 0 0 50px ;
+            }
+        }
+    }
+}  
+
+// 520px - 768 resolution
+@media only screen   
+and (min-width : 520px)  
+and (max-width : 900px)   
+{
+    
+    .country-container{
+        width: auto;
+        .country-flag{
+            flex-basis: 100%;
+            img{
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                display: block;
+                overflow: hidden;
+            }
+        }
+        .country-detail{
+            flex:0 0 100%;
+
+            .detail-wrapper{
+                padding: 20px 0;
+                .left-details{
+                    .left-detail{
+                        width: 100%;
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+
+    }
+}  
+
 /* For 480 Resolution */  
 @media only screen   
-and (min-device-width : 320px)   
-and (max-device-width : 520px)
+and (min-width : 320px)   
+and (max-width : 520px)
 { 
  
     .country-container{

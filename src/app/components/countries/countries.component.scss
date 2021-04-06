@@ -66,10 +66,56 @@
     } 
 }
 
+//3 column
+@media only screen   
+and (min-width : 768px)  
+and (max-width : 1440px)   
+{
+    .country-wrapper{
+       
+        .search{
+            width: 50%;
+        }
+    }
+    .country-container{
+        width: auto;
+        .country-flag{
+            flex-basis: (100 / 3 ) * 1%;
+            .card-container{
+                margin: 0 20px 50px;
+            }
+        }
+
+    }
+}  
+
+// 2 column card
+@media only screen   
+and (min-width : 520px)  
+and (max-width : 768px)   
+{
+    .country-wrapper{
+       
+        .search{
+            width: 100%;
+        }
+    }
+    .country-container{
+        width: auto;
+        .country-flag{
+            flex-basis: (100 / 2 ) * 1%;
+            .card-container{
+                margin: 0 20px 50px;
+            }
+        }
+
+    }
+}  
+
 /* For 480 Resolution */  
 @media only screen   
-and (min-device-width : 320px)   
-and (max-device-width : 520px)
+and (min-width : 320px)   
+and (max-width : 520px)
 { 
     .country-wrapper{
         margin: 0 10px;
